@@ -1,0 +1,1 @@
+insert into Fusibles(identificador,tamano,marca) values('1','F1','GRANDE');

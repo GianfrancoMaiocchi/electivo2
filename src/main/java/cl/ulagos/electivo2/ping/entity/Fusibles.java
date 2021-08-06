@@ -1,8 +1,5 @@
 package cl.ulagos.electivo2.ping.entity;
-
-
-
-
+	
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,8 +14,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-
-
 
 
 @Entity
@@ -38,9 +33,9 @@ public class Fusibles {
 	private Marca marca;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	
 	@JoinColumn(name="fusibles", nullable = false)
-	private Set<Equipamiento> equipamiento = new HashSet<Equipamiento>();
+	
 	
 
 	
@@ -55,7 +50,7 @@ public class Fusibles {
 	public Tamano getTamano() {
 		return tamano;
 	}
-	public void setTamaño(Tamano tamano) {
+	public void setTamano(Tamano tamano) {
 		this.tamano = tamano;
 	}
 	

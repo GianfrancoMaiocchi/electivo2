@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<link type="text/css" rel="stylesheet" href="css/estilo.css"/>
+<div class="card">
+    <h:form id="form">
+        <p:dataTable id="fusibles" var="fusibles" value="#{dtFusibles.fusibles}" rowKey="#{fusibles.identificador}"
+                     selection="#{dtFusibles.fusibleSeleccionado}" selectionMode="single">
+            <f:facet name="header">
+                Lista de Fusibles
+            </f:facet>
+
+            <p:column headerText="Identificador">
+                <h:outputText value="#{fusible.identificador}" />
+            </p:column>
+            <p:column headerText="Tamano">
+                <h:outputText value="#{fusible.tamano}" />
+            </p:column>
+            <p:column headerText="Marca">
+                <h:outputText value="#{fusible.marca}" />
+            </p:column>
+        </p:dataTable>
+
+
+    </h:form>
+</div>
+
+</html>
+

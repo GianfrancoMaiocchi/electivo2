@@ -13,8 +13,8 @@
 		
 		CreaFusibles creaFusibles;
 		javax.naming.InitialContext ctx = new javax.naming.InitialContext(); 
-		creaFusibles = (CreaFusibles) ctx.lookup("java:app/electivojee/CreaFusibles");
-		EspecificacionFusibles especificacionFusibles = new EspecificacionFusibles(Marca.F1, Tamano.MEDIANO);
+		creaFusibles = (CreaFusibles) ctx.lookup("java:app/electivo2/CreaFusibles");
+		EspecificacionFusibles especificacionFusibles = new EspecificacionFusibles(Tamano.MEDIANO, Marca.F1);
 		creaFusibles.creaFusibles(especificacionFusibles);
 		creaFusibles.obtenerFusibles();
 		

@@ -1,14 +1,20 @@
 package cl.ulagos.electivo2.ping.entity;
 
+
 public class EspecificacionFusibles {
 
-	private final Marca marca;
-	private final Tamano tamano;
 	
-	public EspecificacionFusibles(Marca marca, Tamano tamano) {
+	private  Marca marca;
+
+	private  Tamano tamano;
+	
+	
+
+	public EspecificacionFusibles(Tamano tamano, Marca marca) {
 		
 		this.marca = marca;
 		this.tamano = tamano;
+		
 		
 	}
 

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Ingresar Fusible</title>
+	<h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+
+	<h:form id="formulario">
+
+		<p:menu overlay="true" trigger="btn" my="left top" at="bottom left">
+		   <p:submenu label="Mail">
+		        <p:menuitem value="Gmail" url="https://accounts.google.com/" />
+		        <p:menuitem value="Hotmail" url="http://www.hotmail.com" />
+		        <p:menuitem value="Yahoo" url="http://mail.yahoo.com" />
+		    </p:submenu>
+		</p:menu>
+		<p:commandButton id="btn" value="Show Menu" type="button"/>
+		
+
+		<h:panelGrid id="panel" columns="2" border="0" cellpadding="10"
+			cellspacing="1">
+			<h:outputLabel for="tamano" value="Tamano" />
+
+			<h:selectOneMenu value="#{fusibleBacking.tamano}">
+				<f:selectItem itemValue="GRANDE" itemLabel="1. Grande" />
+				<f:selectItem itemValue="MEDIANO" itemLabel="2. Mediano" />
+				<f:selectItem itemValue="PEQUENO" itemLabel="3. Pequeno" />
+			</h:selectOneMenu>
+
+			<h:outputLabel for="marca" value="Marca" />
+
+			<h:selectOneMenu value="#{fusibleBacking.marca}">
+				<f:selectItem itemValue="F1" itemLabel="1. F1" />
+				<f:selectItem itemValue="F2" itemLabel="2. F2" />
+				<f:selectItem itemValue="F3" itemLabel="3. F3" />
+			</h:selectOneMenu>
+			<h:commandButton id="idGuardar" value="Guardar"
+				action="#{fusibleBacking.crearFusible()}" styleClass="myButton" />
+			<h:message for="mensaje" id="mensaje" />
+
+		</h:panelGrid>
+
+	</h:form>
+</h:body>
+</html>
+
